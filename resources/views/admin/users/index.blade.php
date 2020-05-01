@@ -81,7 +81,6 @@
 
 
            <tr>
-{{--              <td>{{$user->id}}</td>--}}
                <td> <img height="50" src="{{$user->photo ? $user->photo->file : 'http://placehold.it/400x400'}}" alt="" ></td>
               <td>{{$user->name}}</td>
               <td>{{$user->email}}</td>
@@ -101,13 +100,13 @@
                    @endif
                </td>
                <td>
-{{--                   <a href="{{route('users.edit', $user->id)}}" class="btn btn-dark btn-block">Actions</a>--}}
 
 
                    <div class="dropdown">
                        <button class="btn btn-dark btn-block dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
                        <ul class="dropdown-menu">
-                           <li><br><br><a href="{{route('users.edit', $user->id)}}" class="btn btn_opt">Update</a> <br><br></li>
+
+                           <li><br><br><a href="{{route('users.edit', openssl_encrypt($user->id,"AES-128-ECB","jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg"))}}" class="btn btn_opt">Update</a> <br><br></li>
 
                             {{--Complete user--}}
                            <li>

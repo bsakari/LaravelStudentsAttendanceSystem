@@ -42,7 +42,7 @@
 {{--              <td> <img height="50" src="{{asset('images/'.$attendance->photo_one )}}" alt="" ></td>--}}
               <td>
                   @if($attendance->is_approved == 0)
-                      <a href="{{route('attendance.edit', $attendance->id)}}">{{$attendance->student_name}}</a>
+                      <a href="{{route('attendance.edit', openssl_encrypt($attendance->id,"AES-128-ECB","jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg"))}}">{{$attendance->student_name}}</a>
                   @else
                       <p>{{$attendance->student_name}}</p>
                   @endif

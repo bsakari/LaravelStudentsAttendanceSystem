@@ -5,7 +5,6 @@
 
     <h1>Lecturers</h1>
 
-
     <div class="col-sm-6">
 
         {!! Form::model($course, ['method'=>'PATCH', 'action'=> ['AdminCoursesController@update', $course->id]]) !!}

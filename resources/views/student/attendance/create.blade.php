@@ -89,7 +89,7 @@
 
 
             <div class="form-group">
-                {!! Form::submit('Submit lec_check_attendance', ['class'=>'btn btn-primary']) !!}
+                {!! Form::submit('Submit Attendance', ['class'=>'btn btn-primary']) !!}
             </div>
 
             {!! Form::close() !!}

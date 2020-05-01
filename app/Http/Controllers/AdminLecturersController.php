@@ -64,7 +64,10 @@ class AdminLecturersController extends Controller
     public function edit($id)
     {
         //
-        $lecturer = Lecturer::findOrFail($id);
+
+        $key="jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg";
+        $decrypted_id=openssl_decrypt($id,"AES-128-ECB",$key);
+        $lecturer = Lecturer::findOrFail($decrypted_id);
         return view('admin.lecturers.edit',compact('lecturer'));
     }
 

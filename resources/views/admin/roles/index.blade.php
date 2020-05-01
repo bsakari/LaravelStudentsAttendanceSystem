@@ -67,7 +67,7 @@
 
                         <tr>
                             <td>{{$role->id}}</td>
-                            <td><a href="{{route('roles.edit', $role->id)}}">{{$role->name}}</a></td>
+                            <td><a href="{{route('roles.edit', openssl_encrypt($role->id,"AES-128-ECB","jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg"))}}">{{$role->name}}</a></td>
                             <td>{{$role->created_at ? $role->created_at->diffForHumans() : 'no date'}}</td>
                         </tr>
                     @endforeach

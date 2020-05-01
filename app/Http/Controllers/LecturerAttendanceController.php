@@ -53,8 +53,11 @@ class LecturerAttendanceController extends Controller
     public function show($id)
     {
         //
+
+        $key="jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg";
+        $decrypted_id=openssl_decrypt($id,"AES-128-ECB",$key);
         $lecturers = Lecturer::all();
-        $details = Attend::findOrFail($id);
+        $details = Attend::findOrFail($decrypted_id);
         return view('lecturer.lec_check_attendance.details',compact('details','lecturers'));
     }
 

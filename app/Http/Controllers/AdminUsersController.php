@@ -132,8 +132,10 @@ class AdminUsersController extends Controller
     public function edit($id)
     {
         //
+        $key="jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg";
+        $decrypted_id=openssl_decrypt($id,"AES-128-ECB",$key);
 
-        $user = User::findOrFail($id);
+        $user = User::findOrFail($decrypted_id);
 
         $roles = Role::pluck('name','id')->all();
 

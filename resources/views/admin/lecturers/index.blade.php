@@ -67,7 +67,7 @@
 
                         <tr>
                             <td>{{$lecturer->id}}</td>
-                            <td><a href="{{route('lecturers.edit', $lecturer->id)}}">{{$lecturer->name}}</a></td>
+                            <td><a href="{{route('lecturers.edit', openssl_encrypt($lecturer->id,"AES-128-ECB","jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg"))}}">{{$lecturer->name}}</a></td>
                             <td>{{$lecturer->created_at ? $lecturer->created_at->diffForHumans() : 'no date'}}</td>
                         </tr>
                     @endforeach

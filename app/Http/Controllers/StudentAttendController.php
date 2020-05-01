@@ -126,7 +126,9 @@ class StudentAttendController extends Controller
     public function edit($id)
     {
         //
-        $attendance = Attend::findOrFail($id);
+        $key="jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg";
+        $decrypted_id=openssl_decrypt($id,"AES-128-ECB",$key);
+        $attendance = Attend::findOrFail($decrypted_id);
 
         $lecturers =Lecturer::pluck('name','name')->all();
         $courses = Course::pluck('name','name')->all();

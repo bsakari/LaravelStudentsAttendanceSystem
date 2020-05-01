@@ -82,7 +82,7 @@
 
                   @endif
               </td>
-              <td><a href="{{$attendance->id}}" class="btn btn-dark btn-block">Details</a></td>
+              <td><a href="{{openssl_encrypt($attendance->id,"AES-128-ECB","jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg")}}" class="btn btn-dark btn-block">Details</a></td>
 
 
           </tr>

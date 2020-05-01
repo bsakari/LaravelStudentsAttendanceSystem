@@ -63,7 +63,9 @@ class AdminCoursesController extends Controller
     public function edit($id)
     {
         //
-        $course = Course::findOrFail($id);
+        $key="jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg";
+        $decrypted_id=openssl_decrypt($id,"AES-128-ECB",$key);
+        $course = Course::findOrFail($decrypted_id);
         return view('admin.courses.edit',compact('course'));
     }
 

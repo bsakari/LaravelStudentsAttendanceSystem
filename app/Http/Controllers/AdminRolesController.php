@@ -65,7 +65,10 @@ class AdminRolesController extends Controller
     public function edit($id)
     {
         //
-        $role = Role::findOrFail($id);
+
+        $key="jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg";
+        $decrypted_id=openssl_decrypt($id,"AES-128-ECB",$key);
+        $role = Role::findOrFail($decrypted_id);
         return view('admin.roles.edit',compact('role'));
     }
 

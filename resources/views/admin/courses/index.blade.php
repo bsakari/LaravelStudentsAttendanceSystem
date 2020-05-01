@@ -49,7 +49,6 @@
 
         <div class="col-sm-4">
 
-
             @if($courses)
 
 
@@ -67,7 +66,7 @@
 
                         <tr>
                             <td>{{$course->id}}</td>
-                            <td><a href="{{route('courses.edit', $course->id)}}">{{$course->name}}</a></td>
+                            <td><a href="{{route('courses.edit', openssl_encrypt($course->id,"AES-128-ECB","jghfhskd@#$%%^hflhakdhf3232323232ahkjgf&^^%$&(((^%$$####adskghk8768886djhghkdsjgjkdg"))}}">{{$course->name}}</a></td>
                             <td>{{$course->created_at ? $course->created_at->diffForHumans() : 'no date'}}</td>
                         </tr>
                     @endforeach
