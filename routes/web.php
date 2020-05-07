@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+//export PATH=~/.local/bin:$PATH
 /*
 |--------------------------------------------------------------------------
 | Web Routes
